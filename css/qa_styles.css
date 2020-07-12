@@ -685,7 +685,7 @@ section.section-blue {
 	}
 	.homepage-booking-frame-module .cta-button {
 		display: inline-block;
-		margin: 0 auto;
+		margin: 5px auto 0;
 	}
 	.homepage-aboutus-module .content-copy-wrapper {
 		margin: -40px auto 0;
@@ -862,7 +862,7 @@ section.section-blue {
 		border-radius: 20px;
 	}
 	.homepage-booking-frame-module .cta-button {
-		margin-left: 20px;
+		margin-left: 30px;
 	}
 	.destinations-hero-globe-wrapper {
 		width: 80vh;
