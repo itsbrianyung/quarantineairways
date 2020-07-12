@@ -809,7 +809,7 @@ section.section-blue {
 	.hero-copy-wrapper {
 		top: 50%;
 		left: 70px;
-		width: calc(50% - 70px);
+		width: calc(60% - 70px);
 	}
 	.hero-heading {
 		line-height: 110%;
