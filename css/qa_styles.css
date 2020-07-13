@@ -34,8 +34,8 @@ section.section-blue {
 	background-color: #0E486C;
 }
 .text {
-	font-family: 'Nunito Sans', Helvetica, sans-serif;
-	font-weight: 400;
+	font-family: semplicitapro, Helvetica, sans-serif;
+	font-weight: 500;
 }
 .text-dark {
 	color: black;
@@ -265,6 +265,9 @@ section.section-blue {
 .cta-button-light:hover {
 	color: black;
 	background-color: rgba(255, 255, 255, 1);
+}
+.cta-button-small {
+	padding: 0.35em 0.75em 0.5em;
 }
 .content-gallery-wrapper {
 	display: flex;
