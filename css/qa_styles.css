@@ -35,7 +35,7 @@ section.section-blue {
 }
 .text {
 	font-family: 'Nunito Sans', Helvetica, sans-serif;
-	font-weight: 600;
+	font-weight: 400;
 }
 .text-dark {
 	color: black;
@@ -222,8 +222,10 @@ section.section-blue {
 	background-color: white;
 }
 .section-heading {
-	margin: 0 auto 16px;
-	line-height: 110%;
+	margin: 0 auto 20px;
+	line-height: 120%;
+	font-family: semplicitapro, Helvetica, sans-serif;
+	font-weight: 600;
 }
 .content-link {
 	display: inline-block;
