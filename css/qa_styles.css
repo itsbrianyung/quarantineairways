@@ -12,6 +12,7 @@
 
 body {
 	margin: 0;
+	-webkit-text-size-adjust: 100%;
 }
 body.no-scroll {
 	overflow: hidden;
@@ -161,19 +162,16 @@ section.section-blue {
 }
 .hero-image-wrapper {
 	width: 100%;
-	height: 100%;
+	height: calc(100% + 120px);;
 	position: relative;
 	z-index: 5;
 	pointer-events: none;
 	overflow: hidden;
 }
 .hero-image-wrapper.extended {
-	height: calc(100% + 120px);
+	height: calc(100% + 250px);
 }
 .hero-image-fadeout {
-	display: none;
-}
-.extended .hero-image-fadeout {
 	display: block;
 	width: 100%;
     height: 50%;
@@ -182,7 +180,7 @@ section.section-blue {
 	z-index: 10;
 	background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
 }
-.body-beige .extended .hero-image-fadeout {
+.body-beige .hero-image-fadeout {
 	background: linear-gradient(to bottom, rgba(255, 251, 242, 0), rgba(255, 251, 242, 1));
 }
 .hero-image {
@@ -193,7 +191,7 @@ section.section-blue {
 	left: 0;
 	z-index: 9;
 	object-fit: cover;
-	object-position: center 80%;
+	object-position: center 100%;
 }
 .content-module {
 	width: 100%;
@@ -287,7 +285,7 @@ section.section-blue {
 .content-block {
 	position: relative;
 }
-.homepage-booking-frame-module {
+.booking-frame {
 	position: relative;
 	margin: 0 auto;
 	background-color: white;
@@ -295,10 +293,10 @@ section.section-blue {
 	text-align: center;
 }
 .homepage-aboutus-module .content-copy-wrapper {
-	padding: 20px 0 80px;
+	padding: 80px 0;
 }
 .homepage-experience-module {
-	background-image: url("../images/hero_destinations.jpg");
+	background-image: url("../images/homepage_destinations_bg.jpg");
 	background-size: cover;
     background-position: center center;
 }
@@ -319,12 +317,18 @@ section.section-blue {
 .homepage-cta-module .section-copy {
 	margin-bottom: 20px;
 }
+.destinations-hero-image {
+	object-position: center 30%;
+}
 .places-block-image {
 	box-sizing: border-box;
 	object-fit: cover;
 }
 .places-block-caption {
 	box-sizing: border-box;
+}
+.places-block-caption h4 {
+	margin-bottom: 8px;
 }
 .places-block-comingsoon {
 	display: inline-block;
@@ -333,6 +337,9 @@ section.section-blue {
 	color: #F2B438;
 	border: 1px solid #F2B438;
 	border-radius: 10px;
+}
+.experience-hero-image {
+	object-position: center 30%;
 }
 .activities-block {
 	border: 3px solid #187AB8;
@@ -440,7 +447,7 @@ section.section-blue {
 		font-size: 40px;
 	}
 	.text-L {
-		font-size: 32px;
+		font-size: 24px;
 	}
 	.text-M {
 		font-size: 20px;
@@ -452,8 +459,11 @@ section.section-blue {
 		font-size: 14px;
 	}
 	.text-nav {
-		font-size: 24px;
+		font-size: 20px;
 		font-weight: 800;
+	}
+	.text-booking-frame {
+		font-size: 16px;
 	}
 	.globalnav {
 		width: 100%;
@@ -554,7 +564,7 @@ section.section-blue {
 	.globalnav-item {
 		display: block;
 		position: relative;
-		margin-bottom: 48px;
+		margin-bottom: 40px;
 		text-align: left;
 		color: white;
 		opacity: 0;
@@ -583,16 +593,16 @@ section.section-blue {
 		opacity: 1;
 	}
 	.open .globalnav-item:nth-child(2) {
-		transition-delay: 0.5s;
+		transition-delay: 0.3s;
 	}
 	.open .globalnav-item:nth-child(3) {
-		transition-delay: 0.55s;
+		transition-delay: 0.35s;
 	}
 	.open .globalnav-item:nth-child(4) {
-		transition-delay: 0.6s;
+		transition-delay: 0.4s;
 	}
 	.open .globalnav-item:nth-child(5) {
-		transition-delay: 0.65s;
+		transition-delay: 0.45s;
 	}
 	.globalnav-link {
 		position: relative;
@@ -610,11 +620,11 @@ section.section-blue {
 	}
 	.globalnav-background {
 		width: 100%;
-		height: 100vh;
+		height: 120vh;
 		background: linear-gradient(to bottom, #0E486C 50%, transparent 50%);
 		background-size: 100% 200%;
 		background-position: bottom;
-		transition: 0.5s ease;
+		transition: 0.55s ease;
 		transition-delay: 0.2s;
 	}
 	.open .globalnav-background {
@@ -654,7 +664,7 @@ section.section-blue {
 	}
 	.after-hero-frame-module .content-copy-wrapper {
 		width: calc(80% - 40px);
-		padding: 80px 0;
+		padding: 60px 0 65px;
 	}
 	.after-hero-frame {
 		width: calc(100% - 40px);
@@ -681,23 +691,24 @@ section.section-blue {
 		margin-bottom: 0;
 	}
 	.homepage-booking-frame-module {
-		width: calc(100% - 40px);
-		top: -97.5px;
-		padding: 30px 30px 42px;
+		margin: 0 0 60px;
+	}
+	.booking-frame {
+		width: calc(100% - 80px);
+		padding: 18px 20px 28px;
 		box-sizing: border-box;
-		border-radius: 10px;
+		border-radius: 20px;
 	}
-	.homepage-booking-frame-module .booking-frame-copy {
+	.booking-frame .booking-frame-copy {
 		display: block;
-		margin-bottom: 12px;
+		margin-bottom: 8px;
 	}
-	.homepage-booking-frame-module .cta-button {
+	.booking-frame .cta-button {
 		display: inline-block;
-		margin: 5px auto 0;
+		padding: 0.30em 0.70em 0.36em;
 	}
 	.homepage-aboutus-module .content-copy-wrapper {
-		margin: -40px auto 0;
-		padding: 0 0 80px;
+		padding: 80px 0;
 	}
 	.destinations-hero-globe-wrapper {
 		display: none;
@@ -719,6 +730,70 @@ section.section-blue {
 	}
 	.aboutus-note-name {
 		margin-bottom: 120px;
+	}
+	
+	/* iPhone notch compensation - MUST come after other styles */
+    /* max() ensures safe-area-inset doesn't affect portrait layout */
+    /* use calc to add margin on top of safe-area-inset */
+    @supports (margin: max(0px)) {
+		.safe-area-adjust {
+			padding: 0px max(0px, env(safe-area-inset-right)) 0px max(0px, env(safe-area-inset-left)); /* adjust padding on either side to accommodate notch; REQUIRES 'px' after 0 */
+			box-sizing: border-box;
+		}
+		.globalnav-logo-wrapper {
+			left: max(40px, calc(40px + env(safe-area-inset-left)));
+		}
+		.globalnav-icon {
+			right: max(40px, calc(40px + env(safe-area-inset-right)));
+		}
+		.after-hero-frame {
+			width: min(calc(100% - 40px), calc(100% - 40px - env(safe-area-inset-left) - env(safe-area-inset-right)));
+		}
+		.homepage-destinations-module .content-copy-wrapper {
+			padding: 80px max(0px, env(safe-area-inset-right)) 80px max(0px, env(safe-area-inset-left));
+			box-sizing: border-box;
+		}
+		.homepage-experience-module-bg {
+			width: min(calc(100% - 40px), calc(100% - 40px - env(safe-area-inset-left) - env(safe-area-inset-right)));
+			left: max(20px, calc(20px + env(safe-area-inset-left)));
+		}
+    }
+}
+
+@media (max-width: 1000px) and (orientation:landscape) {
+	.globalnav-list {
+		display: flex;
+		flex-wrap: wrap;
+		top: calc(50vh - 20px);
+		left: 50%;
+		transform: translate(-50%, calc(-50% + 10px));
+	}
+	.globalnav-item {
+		display: inline-block;
+		flex-basis: 50%;
+		margin-bottom: 30px;
+	}
+	.globalnav-background {
+		transition: 0.45s ease;
+		transition-delay: 0.2s;
+	}
+	.open .globalnav-background {
+		transition-delay: 0s;
+	}
+	.open .globalnav-item:nth-child(2) {
+		transition-delay: 0.25s;
+	}
+	.open .globalnav-item:nth-child(3) {
+		transition-delay: 0.3s;
+	}
+	.open .globalnav-item:nth-child(4) {
+		transition-delay: 0.35s;
+	}
+	.open .globalnav-item:nth-child(5) {
+		transition-delay: 0.4s;
+	}
+	.hero-module {
+		height: 95vh;
 	}
 }
 
@@ -743,6 +818,9 @@ section.section-blue {
 	}
 	.text-nav {
 		font-size: 16px;
+	}
+	.text-booking-frame {
+		font-size: 20px;
 	}
 	.globalnav {
 		width: 100%;
@@ -815,7 +893,7 @@ section.section-blue {
 		opacity: 0.7;
 	}
 	.hero-copy-wrapper {
-		top: 50%;
+		top: 55%;
 		left: 70px;
 		width: calc(50% - 70px);
 	}
@@ -864,13 +942,15 @@ section.section-blue {
 		margin-bottom: 0;
 	}
 	.homepage-booking-frame-module {
+		margin: 60px 0;
+	}
+	.booking-frame {
 		width: 80%;
 		max-width: 800px;
-		top: -60px;
 		padding: 35px 30px;
 		border-radius: 20px;
 	}
-	.homepage-booking-frame-module .cta-button {
+	.booking-frame .cta-button {
 		margin-left: 30px;
 	}
 	.destinations-hero-globe-wrapper {
@@ -928,12 +1008,5 @@ section.section-blue {
 	}
 	.aboutus-hero-image {
 		right: calc(((100% - 1600px)/2) + 70px);
-	}
-	
-	@supports (left: max(0)) {
-		.hero-copy-wrapper {
-		}
-		.aboutus-hero-image {
-		}
 	}
 }
