@@ -149,7 +149,6 @@ section.section-blue {
 	text-align: center;
 }
 .hero-module {
-	height: 85vh;
 	z-index: 15;
 }
 .hero-copy-wrapper {
@@ -650,6 +649,9 @@ section.section-blue {
 	.globalfooter-copyright {
 		margin-top: 32px;
 	}
+	.hero-module {
+		height: 80vh;
+	}
 	.hero-copy-wrapper {
 		width: calc(100% - 80px);
 		top: 55%;
@@ -793,7 +795,7 @@ section.section-blue {
 		transition-delay: 0.4s;
 	}
 	.hero-module {
-		height: 95vh;
+		height: 90vh;
 	}
 }
 
@@ -891,6 +893,9 @@ section.section-blue {
 	}
 	.globalfooter-item:hover {
 		opacity: 0.7;
+	}
+	.hero-module {
+		height: 85vh;
 	}
 	.hero-copy-wrapper {
 		top: 55%;
