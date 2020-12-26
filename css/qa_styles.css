@@ -205,6 +205,10 @@ section.section-blue {
 	padding: 80px 0;
 	text-align: center;
 }
+.content-copy-wrapper.collapse-bottom-padding {
+	padding: 80px 0 0;
+	margin: 0 auto 80px;
+}
 .after-hero-frame-module .content-copy-wrapper {
 	z-index: 10;
 }
@@ -274,6 +278,48 @@ section.section-blue {
 	display: block;
 	width: 100%;
 	object-fit: cover;
+}
+.wide-figure {
+	position: relative;
+	width: 80%;
+	max-width: 800px;
+	margin: 60px auto;
+}
+.wide-figure-caption {
+	position: relative;
+	margin: 0 auto;
+}
+.wide-figure-image {
+	display: block;
+	position: relative;
+	width: 100%;
+	margin: 60px auto;
+}
+.wide-figure-nested {
+	position: relative;
+	width: 100%; /* only as fallback; should specify .nested-vertical or .nested-horizontal */
+	max-width: 800px;
+	margin: 30px auto;
+}
+.wide-figure-nested:first-of-type {
+	margin: 60px auto 30px;
+}
+.wide-figure-nested:last-of-type {
+	margin: 30px auto 60px;
+}
+.wide-figure-nested.wf-nested-vertical {
+	width: 70%;
+}
+.wide-figure-nested.wf-nested-horizontal {
+	width: 100%;
+}
+.wf-nested-image {
+	display: block;
+	position: relative;
+	width: 100%;
+}
+.wf-nested-image-caption {
+	padding: 0 0 0 calc(4.5% + 10px);
 }
 .content-blocks-module {
 	margin: 0 auto;
@@ -407,6 +453,20 @@ section.section-blue {
 	left: 0;
 	z-index: 9;
 	background-color: #FFFBF2;
+}
+.fyc-video {
+	position: relative;
+	margin: 0 auto;
+	z-index: 10;
+}
+.fyc-figure:last-of-type, .fyc-figure:last-of-type .wide-figure-image {
+	margin: 60px auto 0;
+}
+.fyc-figure .wide-figure-nested:last-of-type {
+	margin: 30px auto 70px;
+}
+.fyc-cta-module .content-copy-wrapper {
+	padding: 70px 0 100px;
 }
 
 @media (max-width: 600px) {
@@ -695,6 +755,9 @@ section.section-blue {
 	.gallery-figure-caption {
 		display: none;
 	}
+	.wide-figure-caption {
+		width: 75%;
+	}
 	.content-blocks-wrapper {
 		display: block;
 	}
@@ -744,6 +807,9 @@ section.section-blue {
 	}
 	.aboutus-note-name {
 		margin-bottom: 120px;
+	}
+	.fyc-video {
+		width: calc(90% - 40px);
 	}
 	
 	/* iPhone notch compensation - MUST come after other styles */
@@ -939,6 +1005,18 @@ section.section-blue {
 		margin-top: 16px;
 		text-align: center;
 	}
+	.wide-figure-caption {
+		width: 70%;
+	}
+	.wide-figure-nested.wf-nested-vertical {
+		width: 60%;
+	}
+	.wide-figure-nested.wf-nested-horizontal {
+		width: 90%;
+	}
+	.wf-nested-image-caption {
+		padding: 0 0 0 calc(4.5% + 25px);
+	}
 	.content-blocks-module {
 		width: 70%;
 		max-width: 1025px;
@@ -1016,6 +1094,13 @@ section.section-blue {
 	}
 	.aboutus-note-name {
 		margin-bottom: 140px;
+	}
+	.fyc-after-hero-frame-module.after-hero-frame-module .content-copy-wrapper {
+		padding: 100px 0 80px;
+	}
+	.fyc-video {
+		width: calc(80% - 100px);
+		max-width: 800px;
 	}
 }
 
