@@ -372,7 +372,7 @@ section.section-blue {
 .places-block-caption {
 	box-sizing: border-box;
 }
-.places-block-caption h4 {
+.places-block-caption h4, .wide-figure-caption h4 {
 	margin-bottom: 8px;
 }
 .places-block-comingsoon {
@@ -453,6 +453,37 @@ section.section-blue {
 	left: 0;
 	z-index: 9;
 	background-color: #FFFBF2;
+}
+.fycnav-wrapper {
+	width: 100%;
+	position: absolute;
+}
+.fycnav {
+	width: 100%;
+	position: absolute;
+	z-index: 10;
+}
+.fycnav-logo-wrapper {
+	height: 50px;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.fycnav-logo {
+	width: 100%;
+	height: 100%;
+	background-image: url("../images/fyc_logo.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.fyc-hero-module .hero-copy-wrapper {
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+.fyc-hero-image {
+	object-position: center 45%;
 }
 .fyc-video {
 	position: relative;
@@ -725,9 +756,9 @@ section.section-blue {
 		height: 80vh;
 	}
 	.hero-copy-wrapper {
-		width: calc(100% - 80px);
 		top: 55%;
 		left: 40px;
+		width: calc(100% - 80px);
 	}
 	.hero-heading {
 		line-height: 100%;
@@ -807,6 +838,12 @@ section.section-blue {
 	}
 	.aboutus-note-name {
 		margin-bottom: 120px;
+	}
+	.fycnav {
+		top: 40px
+	}
+	.fycnav-logo-wrapper {
+		width: 240px;
 	}
 	.fyc-video {
 		width: calc(90% - 40px);
@@ -1094,6 +1131,16 @@ section.section-blue {
 	}
 	.aboutus-note-name {
 		margin-bottom: 140px;
+	}
+	.fycnav {
+		max-width: 1600px;
+		top: 50px;
+	}
+	.fycnav-logo-wrapper {
+		width: 330px;
+	}
+	.fyc-hero-module .hero-copy-wrapper {
+		width: 50%;
 	}
 	.fyc-after-hero-frame-module.after-hero-frame-module .content-copy-wrapper {
 		padding: 100px 0 80px;
